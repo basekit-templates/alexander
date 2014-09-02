@@ -106,8 +106,8 @@
 			.border-radius(100px);
 			margin-bottom: 2px;
 			@media @tablet {
-				height: 36px;
-				width: 36px;
+				height: 32px;
+				width: 32px;
 			}
 		}
 		.icons {
@@ -127,15 +127,18 @@
 		margin-right: 2%;
 		max-width: 4%;
 		@media @tablet {
-			max-width: 10%;
+			max-width: 8%;
 			width: auto;
+		}
+		@media @mobile {
+			vertical-align: top;
 		}
 	}
 	&.companyname {
 		margin-left: -4px;
 		width: 30%;
 		@media @tablet {
-			width: 70%;
+			width: 80%;
 		}
 		a {
 			font-weight: @font-swatch10-font-weight;
@@ -280,6 +283,7 @@ div[role="main"] {
 .bk-footer {
 	border-top: 1px solid lighten(@color-swatch5, 40%);
 	padding: 40px 0;
+	@media @tablet { 
+		padding: 40px 25px;
+	}
 }
-
-
