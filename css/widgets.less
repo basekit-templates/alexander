@@ -18,7 +18,8 @@ button.btn,
 .ecombasket-summary-link,
 .basket-summary-empty-cta,
 .ecombasket-remove-button,
-.widget.dropbox .file-name  {
+.widget.dropbox .file-name,
+.productlist-filter .productlist-search .btn  {
 	background-color: @font-swatch7-background-color;
 	color: @font-swatch7-color;
 	font-family: @font-swatch7-font-family;
@@ -44,6 +45,14 @@ button.btn,
 .basket-summary-empty-cta,
 .ecombasket-summary-link {
 	display: inline-block;
+}
+
+.widget.clicktocall a {
+	.border-radius(50px);
+	font-weight: 600;
+	&:hover {
+		.transition(all, .5s, ease-in);
+	}
 }
 
 .widget.ecomcheckout .checkout-order-button:disabled,
@@ -80,18 +89,6 @@ button {
 // -----------------------------
 // Forms
 // -----------------------------
-
-
-// Inputs
-
-.widget.profile form fieldset input, .widget.signupform form fieldset input, .widget.blogsearch form input {
-	width: 80%;
-	+ button, button.btn {
-		margin-left: -4px;
-		width: 20%;
-	}
-}
-
 
 
 // Single Input Forms
@@ -176,6 +173,9 @@ button {
 
 .widget.profile form fieldset button.btn {
 	left: -5px;
+	@media @mobile {
+		left: 0;
+	}
 } 
 
 
@@ -191,6 +191,9 @@ button {
 
 .widget.signupform fieldset button.btn {
 	left: -5px;
+	@media @mobile {
+		left: 0;
+	}
 } 
 
 
@@ -211,6 +214,38 @@ button {
 }
 
 
+// Inputs + Button
+
+.widget.profile form fieldset input, .widget.signupform form fieldset input, .widget.blogsearch form input {
+	width: 80%;
+	@media @mobile {
+		.border-radius(0px);
+		width: 100%;
+	}
+	+ button, button.btn {
+		margin-left: -4px;
+		max-width: 20%;
+		@media @mobile {
+			.border-radius(25px);
+			left: 0;
+			margin-left: 0;
+			margin-top: 15px;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+
+// Mobile Buttons
+
+.widget.profile form fieldset button.btn, .widget.signupform fieldset button.btn {
+	@media @mobile {
+		left: 0;
+		.border-radius(50px);
+	}
+} 
+
+
 
 // -----------------------------
 // Social Icons
@@ -222,8 +257,12 @@ button {
 	border: 2px solid @color-swatch3;
 	.border-radius(50px);
 	color: @color-swatch3;
-	height: 42px;
-	width: 42px;
+	height: 38px;
+	width: 38px;
+	@media @mobile {
+		height: 32px;
+		width: 32px;
+	}
 }
 
 .svg {
@@ -292,7 +331,7 @@ div[role="main"] .widget {
 		}
 		span.image-data:hover {
 			background-color: fade(@color-swatch4, 80%);
-			padding: 40px;
+			padding: 25px;
 			.transition(all, 0.5s, ease-in);
 		}
 		span.image-data:after {
@@ -301,10 +340,10 @@ div[role="main"] .widget {
 			display: block;
 			position: relative;
 			position: absolute;
-			top: 30px;
-			right: 30px;
-			left: 30px;
-			bottom: 30px;
+			top: 18px;
+			right: 18px;
+			left: 18px;
+			bottom: 18px;
 			.transition(background-color, 0.5s, ease-out);
 		}
 		span.inner {
@@ -414,42 +453,88 @@ div[role="main"] .widget {
 
 // Twitter
 
-.twitter-profile-pic img {
-	border-radius: 100px;
-}
-
-.widget.twitter ul li {
-	max-width: 91%;
-}
-
-.widget.twitter .twitter-profile-pic {
-	float: left;
-	margin-right: 20px;
-	max-width: 12%;
-}
-
-.twitter-content {
-	float: left;
-	padding-top: 35px;
-	max-width: 88%;
-	a:first-child {
-		margin-right: 30px;
-		max-width: 40%;
+.widget.twitter {
+	margin: 20px 0;
+	img {
+		border-radius: 50%;
 	}
 	p {
-		max-width: 60%;
+		color: @color-swatch4;
+		padding: 0;
+	}	
+	li {
+		border-bottom: darken(@color-swatch1,10%);
+		&:last-child {
+			padding-bottom: 0;
+		}
 	}
-}
-
-.twitter ul li a, .twitter ul li p {
-	float: left;
-}
-
-.twitter ul li a {
-}
-
-.twitter ul li time, .twitter ul li time + span, .widget.twitter ul li span a  {
-	display: none;
+	ul li a:hover {
+		text-decoration: none;
+	}
+	// Tweet Content
+	.twitter-profile-pic {
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+		width: 12%;
+		margin-right: 2%;
+		@media @tablet {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+	.twitter-content {
+		float: none;
+		display: inline-block;
+		width: 85%;
+		a .bk-full-name {
+			display: block;
+			color: @font-swatch4-color;
+			font-family: @font-swatch4-font-family;
+			font-size: @font-swatch4-font-size;
+			font-weight: @font-swatch4-font-weight;
+			line-height: @font-swatch4-line-height;
+			letter-spacing: @font-swatch4-letter-spacing;
+		}
+		p a, span, a .bk-full-name, p:last-child {
+			display: inline-block;
+			color: @font-swatch5-color;
+			font-family: @font-swatch5-font-family;
+			font-size: @font-swatch5-font-size;
+			line-height: @font-swatch5-line-height;
+			letter-spacing: @font-swatch5-letter-spacing;
+		}
+		// Tweet Link
+		p a, a:hover span.bk-full-name {
+			font-family: @font-swatch5-font-family;
+			font-size: @font-swatch5-font-size;
+			color: @color-swatch2;
+			text-decoration: none;
+		}
+		span a {
+			text-decoration: none;
+			&:hover {
+				color: @color-swatch2;
+				text-decoration: none;
+			}
+		}
+		p {
+			margin-top: 4px;
+			&:last-child {
+				font-weight: inherit;
+			}
+		}
+		// Extra Info
+		time {
+			display: none;
+		}
+		span {
+			font-weight: inherit;
+		}
+		span, span a, p:last-child {
+			font-size: 13px;
+		}
+	}
 }
 
 
