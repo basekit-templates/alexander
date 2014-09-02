@@ -1,7 +1,7 @@
 {
 	"name":"Alexander",
-	"thumbnail":"unknown.png",
-	"screenshot":"unknown.png",
+	"thumbnail":"alexander.png",
+	"screenshot":"alexander.png",
     "templateType":"standard",
     "tags": { "en": ["business", "modern", "light", "social", "contrast", "space"] },
     "pageTypes":["home"],
