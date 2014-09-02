@@ -1,0 +1,17 @@
+<!-- Header Include !-->
+
+
+<header class="bk-header">
+
+		<nav class="bk-nav">
+			{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+			{{widget('extendednavigation', 'header-navigation', {"align":"right"})|raw}}
+		</nav><!--end bk-nav-->
+
+
+		<div class="social">
+			{{widget('socialicons', 'header-social', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+		</div><!--end social-->
+	
+</header>

@@ -1,0 +1,18 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<div class="bk-feature">
+	{{widget('feature', 'header-feature', {"header": "Digital Designer &amp; Developer.", "strapline":"Currently available for freelance in the United Kingdom", "buttonText":"View portfolio","defaultBgImg": asset('images/feature-img.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</div>
+
+<div role="main">
+	<div class="container">
+		<div class="row">
+			<div class="span-12">	
+			{{zone('main')|raw}}
+			</div><!--end span-12-->
+		</div><!--end row-->
+	</div><!--end container-->
+</div><!--end main-->
+
+{% endblock %}
