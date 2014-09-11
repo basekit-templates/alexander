@@ -149,9 +149,7 @@
     .productlist-search {
         margin-bottom: 20px;
         input {
-            -moz-border-radius: 4px;
-            -webkit-border-radius: 4px;
-            border-radius: 4px;
+            .border-radius(4px);
             height: 40px;
             margin-top: 5px;
             border: 1px solid darken(@color-swatch1,10%);
@@ -159,12 +157,14 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             @media @tablet {
-                width: 100%;
                 max-width: 100%;
+            }
+            @media @mobile {
+                width: 100%;
             }
         }
         .btn {
-            border-radius: 0 50px 50px 0;
+            .border-radius(0 50px 50px 0);
             height: 40px;
             position: relative;
             margin: 0;
@@ -173,6 +173,12 @@
             margin-top: 5px;
             @media @tablet {
                 top: 0;
+            }
+            @media @mobile {
+                .border-radius(50px);
+                left: 0;
+                margin-top: 15px;
+                width: 100%;
             }
         }
     }
