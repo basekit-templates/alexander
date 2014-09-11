@@ -13,11 +13,9 @@ button.btn,
 .widget.dropbox button,
 .blog-search-submit-button,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
-.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button,
 .blog-search-submit-button,
 .ecombasket-summary-link,
 .basket-summary-empty-cta,
-.ecombasket-remove-button,
 .widget.dropbox .file-name,
 .productlist-filter .productlist-search .btn  {
 	background-color: @font-swatch7-background-color;
@@ -114,7 +112,7 @@ button {
 	padding-left: 30px;
 	.form-group:first-child:before  {
 		content: "";
-		background-image: url(templates/alexander/images/email-icon.png);
+		background-image: image('/images/email-icon.png');
 		margin-right: 6px;
 		height: 30px;
 		width: 40px;
@@ -122,6 +120,9 @@ button {
 		background-repeat: no-repeat;
 		position: relative;
 		top: 8px;
+		@media @mobile {
+			display: none;
+		}
 	}
 	.form-group:first-child input {
 		display: inline-block;

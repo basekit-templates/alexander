@@ -1,18 +1,36 @@
 {% extends "layout.twig" %}
 {% block content %}
 
-<div class="bk-feature">
-	{{widget('feature', 'header-feature', {"header": "Digital Designer &amp; Developer.", "strapline":"Currently available for freelance in the United Kingdom", "buttonText":"View portfolio","defaultBgImg": asset('images/feature-img.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-</div>
+<div class="bk-pt-home">
 
-<div role="main">
-	<div class="container">
-		<div class="row">
-			<div class="span-12">	
-			{{zone('main')|raw}}
-			</div><!--end span-12-->
-		</div><!--end row-->
-	</div><!--end container-->
-</div><!--end main-->
+	<header class="bk-header">
+		<nav class="bk-nav">
+			<div class="brand">
+				{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+			</div><!--end brand-->
+			{{widget('extendednavigation', 'header-navigation', {"align":"right"})|raw}}
+		</nav><!--end bk-nav-->
+		<div class="social">
+			{{widget('socialicons', 'header-social', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+		</div><!--end social-->
+	</header>
+
+
+	<div class="bk-feature">
+		{{widget('feature', 'header-feature', {"header": "Lorem ipsum dolor sit amet", "strapline":"Phasellus porta libero non hendrerit fringilla", "buttonText":"Click here","defaultBgImg": asset('images/feature-img.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+	</div>
+
+	<div role="main">
+		<div class="container">
+			<div class="row">
+				<div class="span-12">	
+				{{zone('main')|raw}}
+				</div><!--end span-12-->
+			</div><!--end row-->
+		</div><!--end container-->
+	</div><!--end main-->
+
+</div><!--end bk-pt-home-->
 
 {% endblock %}
