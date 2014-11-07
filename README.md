@@ -1,4 +1,4 @@
-Hexagon
+alexander
 =========
 
-Basekit theme
+Basekit Standard template
