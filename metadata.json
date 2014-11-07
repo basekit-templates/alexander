@@ -1,7 +1,7 @@
 {
-	"name":"Hexagon",
-	"thumbnail":"hexagon.png",
-	"screenshot":"hexagon.png",
+    "name":"Alexander",
+    "thumbnail":"alexander.png",
+    "screenshot":"alexander.png",
     "templateType":"standard",
     "tags": { "en": ["business", "modern", "light", "social", "contrast", "space"] },
     "pageTypes":["home"],
@@ -9,17 +9,17 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#00589A",
-            "color3":"#EFA72D",
-            "color4":"#444444",
+            "color2":"#0c222e",
+            "color3":"#005651",
+            "color4":"#2c2c2c",
             "color5":"#7d7d7d",
-            "color6":"#444444",
+            "color6":"#2c2c2c",
             "color7":"#ffffff"
         },
         "Swatch 2": {
             "color1":"#ffffff",
-            "color2":"#EFA72D",
-            "color3":"#D62D37",
+            "color2":"#3c3c3c",
+            "color3":"#BC8F8F",
             "color4":"#1e1e1e",
             "color5":"#7d7d7d",
             "color6":"#1e1e1e",
@@ -27,8 +27,8 @@
         },
         "Swatch 3": {
             "color1":"#ffffff",
-            "color2":"#AED698",
-            "color3":"#CFA446",
+            "color2":"#3c3c3c",
+            "color3":"#8FBC8F",
             "color4":"#1e1e1e",
             "color5":"#7d7d7d",
             "color6":"#1e1e1e",
@@ -36,8 +36,8 @@
         },
         "Swatch 4": {
             "color1":"#ffffff",
-            "color2":"#821A19",
-            "color3":"#6AAF45",
+            "color2":"#474337",
+            "color3":"#d2b48c",
             "color4":"#282720",
             "color5":"#878986",
             "color6":"#282720",
