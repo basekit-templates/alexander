@@ -236,6 +236,12 @@ button {
 			width: 100%;
 		}
 	}
+	@media @tablet {
+		.responsivecolumns & {
+			width: 100%;
+			.border-radius(50px);
+		}
+	}
 }
 
 // Mobile Buttons
@@ -245,7 +251,18 @@ button {
 		left: 0;
 		.border-radius(50px);
 	}
+	@media @tablet {
+		.responsivecolumns & {
+			margin-left: 0;
+			max-width: 100%;
+			left: 0;
+			.border-radius(50px);
+			margin-top: 8px;
+		}
+	}
 } 
+
+
 
 
 
