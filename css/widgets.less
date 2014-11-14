@@ -406,12 +406,21 @@ div[role="main"] .widget {
 	}
 	.slideshow-widget {
 		.btns-move {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			
+			.btn-prev, .btn-next {
+				text-indent: 100%;
+				overflow: hidden;
+				white-space: nowrap;
+			}
 			.btn-prev {
 				left: 0;
 				height: 65px;
 				width: 45px;
 				background: image('/images/arrow-prev.png') @color-swatch1 center no-repeat;
-				color: transparent;
+				
 				&:hover {
 					background: image('/images/arrow-prev-hov.png') @color-swatch2 center no-repeat;
 				}
@@ -421,7 +430,7 @@ div[role="main"] .widget {
 				height: 65px;
 				width: 45px;
 				background: image('/images/arrow-next.png') @color-swatch1 center no-repeat;
-				color: transparent;
+				
 				&:hover {
 					background: image('/images/arrow-next-hov.png') @color-swatch2 center no-repeat;
 				}
