@@ -111,28 +111,52 @@ button {
 .widget.contactform {
 	border-left: 3px solid @color-swatch4;
 	padding-left: 30px;
-	.form-group:first-child:before  {
-		content: "";
-		background-image: image('/images/email-icon.png');
-		margin: 8px 6px 8px 0;
-		height: 30px;
-		width: 40px;
-		display: inline-block;
-		background-repeat: no-repeat;
-		vertical-align: middle;
 
+	.form-group:first-child {
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 16px;
+		padding-top: 7px;
 		@media @mobile {
-			display: none;
+			padding-left: 0;
+		}
+		:before {
+			content: "";
+			background-image: image('/images/email-icon.png');
+			margin: 8px 6px 8px 0;
+			height: 30px;
+			width: 40px;
+			display: inline-block;
+			background-repeat: no-repeat;
+			vertical-align: middle;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			@media @mobile {
+				display: none;
+			}
+		}
+		label, input {
+			display: inline-block;
+			width: auto;
+			vertical-align: middle;
+			margin-bottom: 0;
 		}
 	}
+	
 	.form-group:first-child input {
-		display: inline-block;
-		width: 90%;
+		min-width: 20em;
+		@media @mobile {
+			width: 100%;
+			min-width: 0;
+		}
+
 	}
 	label {
-		text-indent: -9999em;
-		overflow: hidden;
-		height: 0;
+		font-size: 14px;
+		float: none;
+		display: block;
 	}
 	input {
 		border: 0;
@@ -152,6 +176,9 @@ button {
 		.border-radius(8px);
 		margin-bottom: 20px;
 		width: 94%;
+		@media @mobile {
+			width: 100%;
+		}
 	}
 	button.btn {
 		background-color: @color-swatch4;
