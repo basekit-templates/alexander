@@ -97,7 +97,7 @@
 .delivery,
 .ecom-product-info .ecom-product-variation {
     select {
-        width: auto;
+        width: 130px;
         height: 40px;
         margin-top: 5px;
         margin-bottom: 12px;
@@ -108,6 +108,9 @@
         cursor: pointer;
         &:focus {
             outline: 0;
+        }
+        @media only screen and (max-width: 860px) {
+            width: 105px;
         }
         @media @tablet {
             width: 100%;
