@@ -1,5 +1,6 @@
 {
     "name":"Alexander",
+    "versionTenCompatible": 1,
     "thumbnail":"alexander.png",
     "screenshot":"alexander-screenshot.jpg",
     "templateType":"standard",
